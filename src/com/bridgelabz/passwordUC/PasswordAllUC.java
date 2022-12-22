@@ -10,7 +10,8 @@ public class PasswordAllUC {
         System.out.println("Enter password :");
         String password = scanner.nextLine();
 
-        Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*+,:=?|();'<>])(?=.*[0-9]){8,}$");
+        Pattern pattern = Pattern.compile("((?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*+,:=?|();'<>])(?=.*[0-9]).{8,})");
+         //Pattern pattern = Pattern.compile("((?=.*\\d).{8,20})");
         Matcher matcher = pattern.matcher(password);
 
         if(matcher.matches() == true) {
